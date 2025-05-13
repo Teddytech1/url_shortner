@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
             let apiUrl;
             switch(service) {
                 case 'tinyurl':
-                    apiUrl = `https://apis.davidcyriltech.my.id/shortenUrl?url=${encodeURIComponent(longUrl)}`;
+                    apiUrl = `https://apis.davidcyriltech.my.id/tinyurl?url=${encodeURIComponent(longUrl)}`;
                     break;
                 case 'shorter':
-                    apiUrl = `https://apis.davidcyriltech.my.id/cuttly?link=${encodeURIComponent(longUrl)}`;
+                    apiUrl = `https://apis.davidcyriltech.my.id/shortenUrl?url=${encodeURIComponent(longUrl)}`;
                     break;
                 case 'cuttly':
                     apiUrl = `https://apis.davidcyriltech.my.id/cuttly?link=${encodeURIComponent(longUrl)}`;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     apiUrl = `https://apis.davidcyriltech.my.id/bitly?link=${encodeURIComponent(longUrl)}`;
                     break;
                 default:
-                    apiUrl = `https://apis.davidcyriltech.my.id/shortenUrl?url=${encodeURIComponent(longUrl)}`;
+                    apiUrl = `https://apis.davidcyriltech.my.id/tinyurl?url=${encodeURIComponent(longUrl)}`;
             }
 
             const response = await fetch(apiUrl);
